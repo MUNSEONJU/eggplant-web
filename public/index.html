@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EGGPLANT</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Cache-Control" content="No-Cache" />
+  <meta http-equiv="Pragma" content="No-Cache" />
+  <meta name="robots" content="noindex,nofollow" />
+
+  <link href="/common/css/layout3.css" rel="stylesheet" type="text/css" >
+  
+  <style>
+    div {background:#FFFFFF;border:1px solid #EAEAEA;}
+  </style>
+  
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  
+</head>
+
+<body>
+  
+  <div class="h-layout h-flex-y h-bg-gray p-2">
+    <div class="h-flex-box h-lg-col-1" style="flex:0 0 50px;">
+      <span class="h-hidden h-sm-inline-block">-</span> 헤더부분
+    </div>
+    <div class="h-flex-box h-flex-lg-auto h-flex-lg-x h-flex-sm-y h-scroll">
+    
+      <div class="h-flex-box h-flex-sm-fit h-flex-lg-fit h-sm-hidden">앱아이콘나오는곳</div>
+      <div class="h-flex-box h-flex-sm-auto h-flex-lg-auto h-flex-x h-scroll">
+        <div class="h-flex-box h-flex-fit h-sm-hidden">메뉴나오는곳</div>
+        <div class="h-flex-box h-flex-sm-auto h-flex-lg-auto">
+        
+           <!-- 일반적 좌우 그리드 페이지 sta-->
+  <!--         <div class="h-layout h-flex-y h-scroll"> -->
+  <!--           <div class="h-flex-box h-flex-sm-fit h-flex-lg-fit">프로그램명</div> -->
+  <!--           <div class="h-flex-box h-flex-sm-auto h-flex-lg-auto h-flex-y h-flex-md-x"> -->
+  <!--             <div class="h-flex-box h-flex-y"> -->
+  <!--               <div class="h-flex-box h-flex-fit">그리드버튼</div> -->
+  <!--               <div class="h-flex-box h-flex-auto h-flex-sm-grid">그리드</div> -->
+  <!--             </div> -->
+  <!--             <div class="h-slider"></div> -->
+  <!--             <div class="h-flex-box h-flex-y"> -->
+  <!--               <div class="h-flex-box h-flex-fit">그리드버튼</div> -->
+  <!--               <div class="h-flex-box h-flex-auto h-flex-sm-grid" >그리드</div> -->
+  <!--             </div> -->
+  <!--           </div> -->
+  <!--         </div> -->
+          <!-- 일반적 좌우 그리드 페이지 end -->
+          
+           <!-- 일반적 좌우 그리드 페이지 sta-->
+          <div class="h-layout h-flex-y h-scroll">
+            <div class="h-flex-fit">프로그램명</div>
+            <div class="h-flex-box h-flex-sm-auto h-flex-y">
+              <div class="h-flex-fit h-flex-y">
+                <div class="h-flex-fit">그리드버튼</div>
+                <div class="h-flex-fit h-flex-sm-grid">
+                             내용<br> 내용<br> 내용<br> 내용<br> 내용<br> 내용<br> 내용<br> 내용<br> 내용<br> 내용<br> 내용<br> 내용<br> 내용<br> 내용<br>
+                </div>
+              </div>
+              <div class="h-slider"></div>
+              <div class="h-flex-box h-flex-y">
+                <div class="h-flex-fit">그리드버튼</div>
+                <div class="h-flex-auto h-flex-sm-grid" >
+                  <div id="hello"></div>
+                  <div id="like_button_container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 일반적 좌우 그리드 페이지 end -->
+          
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="/common/js/layout3.js"></script>
+  <script src="/common/js/jquery-3.4.1.min.js"></script>
+  <script src="/common/js/common_expansion.js"></script>
+  <script src="/common/js/common_base.js"></script>
+
+  
+  <script src="/components/dist/Hello.bundle.js"></script>
+  <script src="/components/like_button.js"></script>
+  <script>
+    const re = React.createElement;
+
+    const domContainer = document.querySelector('#like_button_container');
+    ReactDOM.render(re(LikeButton), domContainer);
+
+    // const domContainer2 = document.querySelector("#hello");
+    // ReactDOM.render(re(Hello), domContainer2);
+  </script>
+
+</body>
+</html>
