@@ -9,13 +9,17 @@ module.exports = {
   {
     // app : './src/index.js'
     //,print:'./src/print.js'
-    Hello : './resource/components/Hello.js'
+    Hello : './resource/components/Hello.js',
+    Hello2 : './resource/components/Hello2.js',
   },
   output: {
     //filename: 'bundle.js',
     //path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'resource/components/dist'),
+    // library: "bundle", // 이름을 지정 할 경우 bundle.es6Code() 형태로 호출
+    libraryExport:'default',
+    libraryTarget: "umd", // output.libraryTarget을 umd로 설정하면 모듈은 <script src=""> 로드 뿐만 아니라 모든 방식의 로더에서 사용할 수 있음
   },
   resolve : // 모듈을 찾는 방법에 관련된 설정
   {
@@ -35,7 +39,7 @@ module.exports = {
             use:{
                 loader: 'babel-loader',				// babel loader가 파이프를 통해 js 코드를 불러옴
                 options: {
-                    presets: ['@babel/preset-env', '@babel/preset-react']
+                    presets: ['@babel/env', '@babel/react']
                 }
             }
         }
@@ -81,13 +85,15 @@ module.exports = {
     */
 
     // 특정 모듈을 전역에 import한것처럼 작업해줌.
-    /*
+    
     new webpack.ProvidePlugin({
-      $ : 'jquery'
+      //$ : 'jquery',
+      'eggplant' : 'Hello'
     })
-    */
+    
     
   ],
+  
   devServer : {
     contentBase : './dist',
     compress : false,

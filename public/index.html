@@ -86,17 +86,16 @@
   <script src="/common/js/common_expansion.js"></script>
   <script src="/common/js/common_base.js"></script>
 
-  
-  <script src="/components/dist/Hello.bundle.js"></script>
   <script src="/components/like_button.js"></script>
   <script>
-    const re = React.createElement;
-
     //const domContainer = document.querySelector('#like_button_container');
-    //ReactDOM.render(re(LikeButton), domContainer);
+    //ReactDOM.render(React.createElement(LikeButton), domContainer);
+  </script>
 
+<script src="/components/dist/Hello.bundle.js"></script>
+  <script>
     const domContainer2 = document.querySelector("#hello");
-    ReactDOM.render(re(HelloComponent), domContainer2);
+    ReactDOM.render(React.createElement(MyHello), domContainer2);
   </script>
 
 </body>
