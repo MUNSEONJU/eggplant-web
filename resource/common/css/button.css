@@ -1,0 +1,428 @@
+@charset "utf-8";
+.btn_calendar {background:url('/resource/images/icon/icon_calendar.gif') left top no-repeat; width:18px; height:18px; display:inline-block; text-indent:-1000px; cursor:pointer; margin-left:-4px; border:none;}
+.btn_calendar_off {background:url('/resource/images/icon/icon_calendar_off.gif') left top no-repeat; width:18px; height:18px; display:inline-block; text-indent:-1000px; cursor:pointer; margin-left:-4px; border:none;}
+.btn_search01 {width:20px; height:19px; background:url('/resource/images/icon/search.gif') left top no-repeat; display:inline-block; cursor:pointer; margin-left:-3px;  text-indent:-100em; border:none;}
+.btn_search01.disabled {width:20px; height:19px; background:url('/resource/images/icon/search_off.gif') left top no-repeat; display:inline-block; cursor:pointer; margin-left:-3px; text-indent:-100em; border:none;}
+.btn_auto_cal {width:23px; height:19px; background:url('/resource/images/icon/icon_autoCal.gif') right top no-repeat; display:inline-block; cursor:pointer; margin-left:-3px;  text-indent:-100em; border:none;}
+
+.btn_add {width:18px; height:18px; background:url('/resource/images/icon/icon_add.gif') left top no-repeat; display:inline-block; cursor:pointer; margin-left:-5px; text-indent:-100em; border:none;}
+.btn_act {width:18px; height:18px; background:url('/resource/images/icon/icon_act.gif') left top no-repeat; display:inline-block; cursor:pointer; margin-left:-5px; text-indent:-100em; border:none;}
+
+.btn_pop_close {background:url('/resource/images/button/btn_pop_close.gif') left top no-repeat; width:56px; height:20px; line-height:10000px; overflow:hidden; cursor:pointer; border:none;}
+:root .btn_pop_close {background:url('/resource/images/button/btn_pop_close.gif') left top no-repeat; width:56px; height:20px; text-indent:-1000em; overflow:hidden; cursor:pointer; border:none;}
+
+.btn_list {background:url('/resource/images/button/btn_list_icon.gif') left top no-repeat; width:16px; height:16px; display:inline-block; text-indent:-100em; cursor:pointer; border:none;}
+.btn_tree {background:url('/resource/images/button/btn_tree_icon.gif') left top no-repeat; width:16px; height:16px; display:inline-block; text-indent:-100em; cursor:pointer; border:none;}
+
+/* 검색버튼 */
+.btn_search,
+.btn_search * {display:inline-block;background:url('/resource/images/button/btn_search_total.gif') right top no-repeat; vertical-align:top; cursor:pointer; padding:0 5px 0 0;}
+.btn_search .search,
+.btn_search .search * {height:21px; line-height:21px; background:url('/resource/images/button/btn_search_total.gif') left top no-repeat; padding:0 0 0 18px; color:#fff; font-weight:bold;overflow:visible; margin:0; border:none;}
+@-moz-document url-prefix(){
+.btn_search .search,
+.btn_search .search *{line-height:12px; }
+}
+
+.btn_search2 .search{position:absolute; top:50%; margin-top:-17px; right:0;  padding:10px 20px 10px 42px; border:0; border-radius:15px; font-size:14px; color:#fff; background:url('/resource/images/icon/icon_search01.png') no-repeat 20px center #47bdb3;}
+
+.btn_schPem {display:inline-block;*display:inline;zoom:1;margin-left:10px;}
+.btn_schPem input {border:0 !important;background:#31a1f7;font-weight:bold;font-size:13px;color:#fff;background:#31a1f7;height:29px;line-height:29px;padding:0 15px;border-radius:3px;cursor:pointer;}
+
+.executive .btn_search,
+.executive .btn_search * {display:inline-block; background:url('/resource/images/button/btn_search_total03.gif') right top no-repeat; vertical-align:top; cursor:pointer; padding:0 15px 0 0;}
+.executive .btn_search .search,
+.executive .btn_search .search * {height:30px; line-height:30px; background:url('/resource/images/button/btn_search_total03.gif') left top no-repeat; padding:0 0 0 15px; color:#fff; font-weight:bold; font-size:14px; overflow:visible; margin:0; border:none;}
+/* 멀티셀렉트용 닫기(초기화) 버튼 */
+.btn_close2      { border:none;display:inline-block; background: url(/resource/images/button/btn_close_m.gif) 0 0 no-repeat;width:20px; height:18px; vertical-align:top; cursor:pointer;margin-left:3px;}
+
+
+/* Button Set */
+span.btn,
+span.btn {display:inline-block; height:21px; vertical-align:middle; background:url('/resource/images/button/bt_bg.gif') 0 0 no-repeat;padding:0px; }
+
+span.btn input {overflow:visible; height:21px; line-height:17px; *line-height:14px; padding:0 5px 0 25px; color:#000; cursor:pointer; background:url('/resource/images/button/bt_icon.png') no-repeat 0 -420px; border:none;border:1px solid #d7d7d7; border-radius:3px;}
+@-moz-document url-prefix() { .btn input {height:19px; line-height:14px; padding:0 4px 0 24px;} }
+
+
+span.btn.on {background-position:0 0; }
+span.btn.on input {color:#000; border:1px solid #d7262e;}
+span.btn.on input.disabled {color:#a0a0a0; border:1px solid #d7d7d7;}
+
+/* 엑셀 */
+span.btn .ex,
+span.btn .ex *{background-position:0 -90px; *background-position:0 -91px;}
+
+/* 엑셀 - 업로드 */
+span.btn .exup,
+span.btn .exup *{background-position:0 -120px; *background-position:0 -121px;}
+
+
+/* 추가 */
+span.btn .insert,
+span.btn .insert *{ background-position:0 0;}
+
+/* 기본블릿 */
+span.btn .blt,
+span.btn .blt *{background-position:0 -420px; *background-position:-1px -421px;}
+
+/* 저장 */
+span.btn .save,
+span.btn .save * {background-position:0 -60px; *background-position:0 -61px;}
+
+/* 삭제 */
+span.btn .delete,
+span.btn .delete * {background-position:0 -150px; *background-position:0 -151px;}
+
+/* 복사 */
+span.btn .copy,
+span.btn .copy * {background-position:0 -30px; *background-position:0 -31px;}
+
+/* 조회 */
+span.btn .search,
+span.btn .search * {background-position:0 -210px; *background-position:-1px -212px;}
+
+/* 선택 */
+span.btn .choice,
+span.btn .choice * {background-position:0 -450px; *background-position:0 -451px;}
+
+/* 프린트 */
+span.btn .print,
+span.btn .print * {background-position:0 -300px; *background-position:0 -301px;}
+
+/* 파일찾아보기 */
+span.btn .fileSearch,
+span.btn .fileSearch * {background-position:0 -270px; *background-position:0 -271px;}
+
+/* 이전보기 버튼 */ 
+span.btn .prev, 
+span.btn .prev * {background-position:0 -540px; *background-position:0 -541px;} 
+
+/* 다음보기 버튼 */ 
+span.btn .next, 
+span.btn .next * {background-position:0 -570px; *background-position:0 -571px;}
+
+/* Button disable Set */
+span.btn input.disabled {background:url('/resource/images/button/bt_icon_off.png') no-repeat 0 0; color:#a0a0a0;padding:0 5px 0 25px !important;}
+
+/* 버튼 - 메세지창  */
+.etc .btMsg {margin-left:5px; vertical-align:top;}
+.btMsg {position:relative;display:inline-block; vertical-align:middle; flex:0 0 22px; width:22px !important; height:22px; font-size:0; line-height:0; cursor:pointer;}
+.btMsg .btMsg-icon{width:22px !important; height:22px; font-size:0; line-height:0; cursor:pointer; background:url('/resource/images/button/btn_msg.png') 0 0 no-repeat;display:inline-block;}
+/* .btMsg:hover {background:url('/resource/images/button/msg_btn.png') -27px 0 no-repeat;} */
+
+/* 알림창 */
+.inFrm .msg {z-index:800; position:absolute; margin-top:5px; right:0; min-width:200px; border-radius:10px; background:url(/resource/images/button/msg_bg.png);}
+.msgEtc .msg {z-index:800; position:absolute; margin-top:5px; right:0; min-width:200px; border-radius:10px; background:url(/resource/images/button/com/msg_bg.png);}
+/*.msg  {z-index:800; position:absolute; margin-top:5px; right:0px; min-width:200px; border-radius:10px; background:url(/resource/images/button/msg_bg.png);}*/
+.msg .in {margin:1px; padding:28px 15px 10px; border:1px solid #727272; border-radius:inherit; line-height:17px;}
+.msg .chk {position:absolute; top:6px; right:36px; height:19px; padding:0 9px 0 8px; border:1px solid #212121; border-bottom:none; border-right:none; border-radius:9px; background:#2b2b2b; box-shadow:inset 1px 1px 2px #1e1e1e;} 
+.msg .chkTxt {float:left; margin: 4px 5px 0 0; font-size:11px; line-height:1; color:#929292;}
+:root .msg .chkTxt  {margin-top:6px\9;}
+.msg .chkBox {float:left; width:10px; height:10px; margin-top:5px; text-indent:-9999px; cursor:pointer; background:url(/resource/images/button/msg_chk.png) no-repeat;}
+.msg .checked {background-position:0 -15px;}
+.msg .close {position:absolute; top:8px; right:9px; width:22px; height:22px; font-size:0; text-indent:-9999px; cursor:pointer; background:url(/resource/images/button/msg_btn.png)  0 -30px no-repeat;}
+.msg .close:hover {background:url(/resource/images/button/msg_btn.png)  -27px -30px no-repeat;}
+.msg dl {}
+.msg dt {margin-top:5px; padding-left:13px; color:#ffea00; font-weight:bold; background:url(/resource/images/button/msg_dot.png) no-repeat 0 6px;}
+.msg dd {margin-left:13px; padding-left:11px; text-indent:-11px; color:#d8d8d8; }
+.msg p {margin-top:5px; padding:0 0 0 13px; color:#d8d8d8; background:url(/resource/images/button/msg_dot.png) no-repeat 0 7px;line-height:1.5;}
+.msg table th p, .msg table td p {color:#d8d8d8; background:none !important;}
+.msg strong {color:#ffea00;font-weight:normal;font-weight:bold;}
+
+/* mdi 닫기 버튼 */
+.btnAllClose {width:auto;height:21px;line-height:19px;color:#fff;text-align:center;padding:0 9px;background:#818589;border:1px solid #6D7378;border-radius:2px;vertical-align:top;cursor:pointer;}
+.btnAllClose:hover {background:#d7262e;border:1px solid #d7262e;}
+.btnProtect {width:auto;height:21px;line-height:19px;color:#fff;text-align:center;padding:0 9px;background:#818589;border:1px solid #6D7378;border-radius:2px;vertical-align:top;cursor:pointer;}
+.btnProtect:hover {background:#d7262e;border:1px solid #d7262e;}
+.btnCancel {width:auto;height:21px;line-height:19px;color:#757575;text-align:center;padding:0 9px;background:#fff;border:1px solid #a3a3a3;border-radius:2px;vertical-align:top;cursor:pointer;}
+.btnCancel:hover {color:#d7262e;background:#fff;border:1px solid #d7262e;}
+
+/* 엑셀 */
+span.btn input.disabled.ex,
+span.btn input.disabled.ex * {background-position:0 -90px; *background-position:0 -91px;}
+
+/* 엑셀 - 업로드 */
+span.btn input.disabled.exup,
+span.btn input.disabled.exup * {background-position:0 -120px; *background-position:0 -121px;}
+
+/* 추가 */
+span.btn input.disabled.insert,
+span.btn input.disabled.insert * {background-position:0 0;}
+
+/* 기본블릿 */
+span.btn input.disabled.blt,
+span.btn input.disabled.blt * {background-position:0 -420px; *background-position:-1px -421px;}
+
+/* 저장 */
+span.btn input.disabled.save,
+span.btn input.disabled.save * {background-position:0 -60px; *background-position:0 -61px;}
+
+/* 삭제 */
+span.btn input.disabled.delete,
+span.btn input.disabled.delete * {background-position:0 -150px; *background-position:0 -151px;}
+
+/* 복사 */
+span.btn input.disabled.copy,
+span.btn input.disabled.copy * {background-position:0 -30px; *background-position:0 -31px;}
+
+/* 조회 */
+span.btn input.disabled.search,
+span.btn input.disabled.search * {background-position:0 -210px; *background-position:-1px -212px;}
+
+/* 선택 */
+span.btn input.disabled.choice,
+span.btn input.disabled.choice * {background-position:0 -450px; *background-position:0 -451px;}
+
+/* 프린트 */
+span.btn input.disabled.print,
+span.btn input.disabled.print * {background-position:0 -300px; *background-position:0 -301px;}
+
+/* 파일찾아보기 */
+span.btn input.disabled.fileSearch,
+span.btn input.disabled.fileSearch * {background-position:0 -270px; *background-position:0 -271px;}
+
+/* 이전보기 버튼 */ 
+span.btn input.disabled.prev, 
+span.btn input.disabled.prev * {background-position:0 -540px; *background-position:0 -541px;} 
+
+/* 다음보기 버튼 */ 
+span.btn input.disabled.next, 
+span.btn input.disabled.next * {background-position:0 -570px; *background-position:0 -571px;}
+
+/* 기간선택 버튼 */
+
+.btn_period {height:19px; padding:0 6px 2px 5px;  *padding:0 0 2px 0; color:#000; font-size:11px; cursor:pointer; background:#fff; border:1px solid #d7d7d7; border-radius:2px;}
+
+span.btn_period {height:19px; padding:0 6px 2px 5px;  *padding:0 0 2px 0; color:#000; font-size:11px; cursor:pointer; background:#fff; border:1px solid #d7d7d7; border-radius:2px;}
+
+ @media screen and (-webkit-min-device-pixel-ratio:0) { 
+ .btn_period {padding:0 6px 0 5px;}
+ }
+
+
+
+/* 게시판 네비게이션(페이징, 버튼) */
+.pagination {position:relative;margin:10px auto;width:800px;text-align:center;}
+.pagination a {padding:0 3px 0 7px; color:#848485;}
+.pagination strong {padding:0 3px 0 7px; color:#2e6bc0; text-decoration:underline; font-weight:bold;}
+.pagination a:hover {padding:0 3px 0 7px; color:#2e6bc0; text-decoration:underline;}
+.pagination a:visited {color:#1f1f1f !important;}
+.pagination a img {margin:-2px -4px 0 -4px; vertical-align:middle;}
+.pagination a.prev {padding-right:6px;}
+.pagination a.next {padding-left:12px;}
+.buttonLeft {float:left; text-align:left;padding:5px 0;}
+.buttonLeft a {margin-right:5px;}
+.buttonRight {float:right; text-align:right;padding:5px 0;}
+.buttonRight a {margin-left:5px;}
+
+.page_position {position:relative; bottom:5px; text-align:center;padding:5px;}
+.page_list {position:absolute; left:20px; height:45px; text-align:center; overflow:hidden; white-space:nowrap; padding:5px; margin:0 15px;}
+.page_menu {width:780px; height:45px; position:relative; text-align:center;}
+.page_first {}
+.page_first a {width:15px; height:0; background:url('/resource/images/board/btn_first.gif') left top no-repeat; padding-top:29px; overflow:hidden; display:inline-block; position:absolute; top:5px; left:0;}
+.page_prev {}
+.page_prev a {width:15px; height:0; background:url('/resource/images/board/btn_prev.gif') left top no-repeat; padding-top:29px; overflow:hidden; display:inline-block; position:absolute; top:5px; left:15px;}
+.page_next {}
+.page_next a {width:15px; height:0; background:url('/resource/images/board/btn_next.gif') left top no-repeat; padding-top:29px; overflow:hidden; display:inline-block; position:absolute; top:5px; right:15px;}
+.page_end {}
+.page_end a {width:15px; height:0; background:url('/resource/images/board/btn_last.gif') left top no-repeat; padding-top:29px; overflow:hidden; display:inline-block; position:absolute; top:5px; right:0px;}
+
+/* 상세정보 레이어 띄우기 버튼 - Global HR 현황, 사별현황 테이블 안에 용도로 사용 */
+.btnDetail {width:20px;height:20px;background:url('/resource/images/button/btn_detail.gif') left center no-repeat; display:inline-block;margin-left:10px;text-indent:-100em;border:none;cursor:pointer;}
+
+.btn2,
+.btn2 {display:none;display:inline-block; height:21px; vertical-align:middle;background:url('/resource/images/button/bt_bg.gif') 0 0 no-repeat;}
+
+.btn2.on {background-position:0 0; }
+.btn2.on input {color:#000; border:1px solid #d7262e;}
+.btn2.on input.disabled {color:#a0a0a0; border:1px solid #d7d7d7;}
+
+.btn2 input {overflow:visible; height:21px;line-height:17px; *line-height:14px; padding:0 5px 0 25px; color:#000; cursor:pointer; background:url('/resource/images/button/bt_icon.png') no-repeat 0 0; border:1px solid #d9d9d9; border-radius:3px;}
+@-moz-document url-prefix() { .btn2 input2 {height:21px; line-height:14px; padding:0 4px 0 24px;} }
+
+
+.btn2 .applAdd, 
+.btn2 .applAdd * {background-position:0 -270px; *background-position:0 -271px;}
+
+
+/* 평가결과 조건검색 Button Set */
+.btn3,
+.btn3 {/*display:none;*/ height:29px; vertical-align:middle; background:#fff; }
+
+.btn3 input {overflow:visible; height:33px; padding:0 10px 0 20px;margin:0 2px; color:#3b4d5e; cursor:pointer; background:url('/resource/images/button/bt_icon.png') no-repeat 0 -619px; border:2px solid #a2b4c6;}
+
+.btn3.on {background-position:0 0; }
+.btn3.on input {color:#000; border:2px solid #788b9e;}
+.btn3.on input.disabled {color:#a0a0a0; border:1px solid #d7d7d7;}
+
+.btn4 {vertical-align:middle; }
+.btn4 input {overflow:visible; padding-left:30px;padding-right:30px;height:30px; background:#788b9e;border:none;text-align:center;color:#fff;cursor:pointer;}
+.btn4.on input {background:#647789;}
+
+/* 프로세스 세션조건 버튼 */
+.btnR_sessionCondition {position:absolute;top:21px;right:0; z-index:1;background:url('/resource/images/button/btn_session_condition.gif') 0 0 no-repeat;width:30px;height:30px;}
+
+/* 직원찾기 레이어 paging */
+.btnPageWrap {text-align:center;padding:7px 0 0 0;}
+a.btnPage {display:inline-block;width:13px;height:20px;overflow:hidden;background:url('/resource/images/button/btn_rolling.png') 0 0 no-repeat;}
+a.btnPage.btnPrev {background-position:0 0;}
+a.btnPage.btnPrev:hover {background-position:0 -20px;}
+a.btnPage.btnNext {background-position:-17px 0;}
+a.btnPage.btnNext:hover {background-position:-17px -20px;}
+a.btnPage.btnFirst {background-position:-34px 0;}
+a.btnPage.btnFirst:hover {background-position:-34px -20px;}
+a.btnPage.btnEnd {background-position:-51px 0;}
+a.btnPage.btnEnd:hover {background-position:-51px -20px;}
+#pageLayer {display:inline-block;width:auto;text-align:center;margin:0 4px 0 7px;vertical-align:top !important;}
+a.pageLayer {display:inline-block;width:18px;height:18px;line-height:18px;color:#fff;font-family:Verdana;font-size:11px;text-align:center;background:#878787;margin:0 0 0 5px;}
+a.pageLayer:hover {color:#fff;background:#ed1a3b;}
+a.pageLayer.on {color:#fff;background:#ed1a3b;}
+a.pageLayer:first-child {margin:0;}
+.pageBorder {border-top:1px solid #999;}
+
+/* 세그먼트바(+,-,1,2,3) */
+.segmentBar {margin:7px 0;}
+.segmentBar li {float:left;cursor:pointer;}
+
+/* 트리버튼(tree/list type) */
+.btnTree {float:left;margin:7px 5px 7px 0;}
+.btnTree li {float:left;cursor:pointer;}
+
+/* 근태 - 연차사용률 상세보기 */
+.btn_imgDetail {position:absolute;top:20px;right:10px;background:url('/resource/images/button/btn_imgDetail.gif') 0 0 no-repeat;width:19px;height:22px;cursor:pointer;border:0;}
+
+/* 수시성과 모니터링 */
+.btn_pemS {margin:0 0 0 10px;}
+.btn_pemS a {display:inline-block;*display:inline;zoom:1;height:23px;padding:7px 15px 0 15px;border-radius:3px;background:#31a1f7;font-weight:bold;color:#fff;font-size:13px;text-decoration:none;}
+.btn_pemS a:hover {color:#fff;background:#2196f0;text-decoration:none;}
+.btn_pemM {margin:0;}
+.btn_pemM a {display:inline-block;*display:inline;zoom:1;height:30px;line-height:30px;padding:0 15px;border-radius:3px;background:#31a1f7;font-weight:bold;color:#fff;font-size:13px;text-decoration:none;}
+.btn_pemM a:hover {color:#fff;background:#2196f0;text-decoration:none;}
+
+.btn_reSet, .btn_selVS {display:inline-block;*display:inline;zoom:1;}
+.btn_reSet input, .btn_selVS input  {width:120px;height:30px;line-height:30px;;border-radius:3px;text-align:center;border:0 !important;font-weight:bold;font-size:13px;cursor:pointer;}
+.btn_reSet input {background:#fff;color:#1c8fe8;}
+.btn_selVS input {background:#31a1f7;color:#fff;}
+
+.btn_pemView {background:#5a6176;}
+.btn_pemView {display:inline-block;*display:inline;zoom:1;width:120px;height:23px;padding-top:7px;border-radius:3px;text-align:center;}
+.btn_pemView input {border:0 !important;background:#5a6176;font-weight:bold;font-size:12px;cursor:pointer;color:#fff;}
+
+.btn_pemAdd {position:absolute;top:11px;left:94px;z-index:2;}
+.btn_pemAdd input {border:0 !important;background:url('/resource/images/button/btn_add.png') 0 0 no-repeat;width:30px;height:30px;cursor:pointer;}
+
+.btn_pemWrite {background:url('/resource/images/button/btn_pemWrite.gif') 0 0 no-repeat;margin-left:5px;}
+.btn_pemWrite:hover {background:url('/resource/images/button/btn_pemWrite_on.gif') 0 0 no-repeat;}
+.btn_pemDel   {background:url('/resource/images/button/btn_pemDel.gif') 0 0 no-repeat;margin-left:5px;}
+.btn_pemDel:hover  {background:url('/resource/images/button/btn_pemDel_on.gif') 0 0 no-repeat;}
+.btn_pemWrite, .btn_pemWrite:hover, .btn_pemDel, .btn_pemDel:hover {border:0 !important;width:25px;height:25px;cursor:pointer;text-indent:-999px}
+
+/* Crownix 뷰어 툴바 */
+.btnWrap li input{cursor: pointer;width:40px;height:50px;border:0;}
+.btnWrap ul {padding:0 !important;margin:0 !important;}
+.btnWrap li {display:inline-block;width:55px;height:50px;background:url('/resource/images/button/c-btn-line.gif') 0 center no-repeat; z-index:10; padding:0 0 0 19px; margin:0 0 0 3px;}
+.btnWrap li:first-child {background:0;}
+
+.c-btnFirst {background:url('/resource/images/button/c-btn-first.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnFirst:hover, .c-btnFirst.inactive {background:url('/resource/images/button/c-btn-first.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnPrev {background:url('/resource/images/button/c-btn-Prev.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnPrev:hover, .c-btnPrev.inactive {background:url('/resource/images/button/c-btn-Prev.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnNext {background:url('/resource/images/button/c-btn-Next.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnNext:hover, .c-btnNext.inactive {background:url('/resource/images/button/c-btn-Next.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnLast {background:url('/resource/images/button/c-btn-Last.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnLast:hover, .c-btnLast.inactive {background:url('/resource/images/button/c-btn-Last.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnJump {background:url('/resource/images/button/c-btn-Jump.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnJump:hover, .c-btnJump.inactive {background:url('/resource/images/button/c-btn-Jump.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnZoomIn {background:url('/resource/images/button/c-btn-ZoomIn.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnZoomIn:hover, .c-btnZoomIn.inactive {background:url('/resource/images/button/c-btn-ZoomIn.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnZoomOut {background:url('/resource/images/button/c-btn-ZoomOut.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnZoomOut:hover, .c-btnZoomOut.inactive {background:url('/resource/images/button/c-btn-ZoomOut.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnRestoreSize {background:url('/resource/images/button/c-btn-RestoreSize.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnRestoreSize:hover, .c-btnRestoreSize.inactive {background:url('/resource/images/button/c-btn-RestoreSize.png') 0 0 no-repeat; background-position:-46px 13px;;}
+.c-btnFitWidth {background:url('/resource/images/button/c-btn-FitWidth.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnFitWidth:hover, .c-btnFitWidth.inactive {background:url('/resource/images/button/c-btn-FitWidth.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnFitHeight {background:url('/resource/images/button/c-btn-FitHeight.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnFitHeight:hover, .c-btnFitHeight.inactive {background:url('/resource/images/button/c-btn-FitHeight.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnSavePdf {background:url('/resource/images/button/c-btn-SavePdf.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnSavePdf:hover, .c-btnSavePdf.inactive {background:url('/resource/images/button/c-btn-SavePdf.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnSaveDoc {background:url('/resource/images/button/c-btn-SaveDoc.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnSaveDoc:hover, .c-btnSaveDoc.inactive {background:url('/resource/images/button/c-btn-SaveDoc.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnSaveXls {background:url('/resource/images/button/c-btn-SaveXls.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnSaveXls:hover, .c-btnSaveXls.inactive {background:url('/resource/images/button/c-btn-SaveXls.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnSaveHwp {background:url('/resource/images/button/c-btn-SaveHwp.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnSaveHwp:hover, .c-btnSaveHwp.inactive {background:url('/resource/images/button/c-btn-SaveHwp.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnSavePpt {background:url('/resource/images/button/c-btn-SavePpt.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnSavePpt:hover, .c-btnSavePpt.inactive {background:url('/resource/images/button/c-btn-SavePpt.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnPrint {background:url('/resource/images/button/c-btn-Print.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnPrint:hover, .c-btnPrint.inactive {background:url('/resource/images/button/c-btn-Print.png') 0 0 no-repeat; background-position:-46px 13px;}
+.c-btnStop {background:url('/resource/images/button/c-btn-Stop.png') 0 0 no-repeat; background-position:0 13px;}
+.c-btnStop:hover, .c-btnStop.inactive {background:url('/resource/images/button/c-btn-Stop.png') 0 0 no-repeat; background-position:-46px 13px;}
+
+
+/* ================================================ ESS 버튼 근태4================================================ */
+/* 문의하기 */
+.btn_ask,
+.btn_ask * {display:inline-block; background:url('/resource/images/button/btn_exp_round.gif') right top no-repeat; vertical-align:top; cursor:pointer; padding:0 10px 0 0;}
+.btn_ask .ask,
+.btn_ask .ask * {height:25px; line-height:24px; background:url('/resource/images/button/btn_ask.gif') left top no-repeat; padding:0 0 0 32px; font-size:12px; font-weight:bold; color:#18b3af; overflow:visible; margin:0; border:none;}
+
+.btn_mail,
+.btn_mail * {display:inline-block; background:url('/resource/images/button/btn_exp_round.gif') right top no-repeat; vertical-align:top; cursor:pointer; padding:0 10px 0 0;}
+.btn_mail .mail,
+.btn_mail .mail * {height:25px; line-height:24px; background:url('/resource/images/button/btn_mail.gif') left top no-repeat; padding:0 0 0 32px; font-size:12px; font-weight:bold; color:#18b3af; overflow:visible; margin:0; border:none;}
+
+/* ess - 검색버튼 */
+.btn_search2,
+.btn_search2 * {display:inline-block; background:url('/resource/images/button/btn_ess_search.gif') left top no-repeat; vertical-align:top; cursor:pointer; padding:0 15px 0 0;}
+.btn_search2 .search2,
+.btn_search2 .search2 * {height:31px; line-height:31px; background:url('/resource/images/button/btn_ess_search.gif') left top no-repeat; padding:0 0 0 45px; color:#fff; font-weight:bold; font-size:14px; overflow:visible; margin:0; border:none;}
+
+/* Button Set */
+.btnComm    {color:#18b3af; border:1px solid #18b3af; background:#fff;}
+.btnMainEmp {color:#fff; border:1px solid #18b3af; background:#18b3af;}
+.btnSubEmp  {color:#fff; border:1px solid #ff7a00; background:#ff7a00;}
+.btnGray    {color:#fff; border:1px solid #666; background:#666;}
+
+.btnPem2,
+.btnPem2 {display:inline-block;height:25px; vertical-align:middle;margin-left:2px;}
+.btnPem2 input {overflow:visible; height:25px;font-size:12px; font-weight:bold;vertical-align:top;padding-left:10px;padding-right:10px;}
+.btnPem2.onBtn input {color:#fff; background:#575757;border:1px solid #575757;}
+.btnPem2 input.disabled {color:#a0a0a0; background:#ccc;}
+
+.btnSubComm    {color:#18b3af; border:1px solid #18b3af; background:#fff;}
+
+.btnSubEmpJ,
+.btnSubEmpJ {display:inline-block;height:32px; vertical-align:middle;margin-left:2px;}
+.btnSubEmpJ input {overflow:visible; height:32px;color:#18b3af;font-size:14px; font-weight:bold; background:#fff;border:1px solid #18b3af;vertical-align:top;padding-left:10px;padding-right:10px;border-radius:3px;}
+.btnSubEmpJ input:hover {color:#fff; background:#18b3af;border:1px solid #18b3af;cursor:pointer;}
+.btnSubEmpJ input.disabled {color:#a0a0a0; background:#ccc;}
+
+.btnSubEmpO,
+.btnSubEmpO {display:inline-block;height:32px; vertical-align:middle;margin-left:2px;}
+.btnSubEmpO input {overflow:visible; height:32px;color:#ff7a00;font-size:14px; font-weight:bold;background:#fff;border:1px solid #ff7a00;vertical-align:top;padding-left:10px;padding-right:10px;border-radius:3px;}
+.btnSubEmpO input:hover {color:#fff; background:#ff7a00;border:1px solid #ff7a00;cursor:pointer;}
+.btnSubEmpO input.disabled {color:#a0a0a0; background:#ccc;}
+
+/* 특수버튼 */
+.btnSpec {display:inline-block;height:19px;vertical-align:middle;margin-left:2px;}
+.btnSpec input {overflow:visible; height:19px;line-height:16px;font-size:12px;vertical-align:middle;padding-left:20px;padding-right:5px;border-radius:3px;}
+.btnSpec input.disabled {color:#a0a0a0; border:1px solid #d7d7d7;}
+.btnSpec input.btnSpecJ {color:#18b3af; border:1px solid #18b3af; background:#fff;background:url('/resource/images/button/btn_specJ.png') 3px 0 no-repeat;}
+.btnSpec input.btnSpecJ:hover {color:#fff; border:1px solid #18b3af;background:#18b3af url('/resource/images/button/btn_specOn.png') 3px 0 no-repeat;cursor:pointer;}
+.btnSpec input.btnSpecO {color:#ff7a00; border:1px solid #ff7a00; background:#fff;background:url('/resource/images/button/btn_specO.png') 3px 0 no-repeat;}
+.btnSpec input.btnSpecO:hover {color:#fff; border:1px solid #ff7a00;background:#ff7a00 url('/resource/images/button/btn_specOn.png') 3px 0 no-repeat;cursor:pointer;}
+
+.btnNote,
+.btnNote {display:inline-block;height:25px; vertical-align:middle;margin-left:2px;}
+.btnNote input {overflow:visible; height:25px;font-size:14px; font-weight:bold;vertical-align:top;padding-left:10px;padding-right:10px;cursor:pointer;}
+.btnNote.onBtn input {color:#fff; background:#575757;border:1px solid #575757;}
+.btnNote input.disabled {color:#a0a0a0; background:#ccc;}
+
+/* 출퇴근기록 버튼 */
+.btn_goWork, .btn_outWork {border:0;border-radius:5px;padding-left:60px;text-align:left;color:#fff;font-size:18px;font-weight:bold;width:155px;height:50px;line-height:50px;cursor:pointer;}
+.btn_goWork {background:#18b3af url('/resource/images/button/btn_goWork.png') 20px 12px no-repeat;}
+.btn_outWork {background:#18b3af url('/resource/images/button/btn_outWork.png') 20px 12px no-repeat;}
+.btn_goWork:hover {background:#575757 url('/resource/images/button/btn_goWork.png') 20px 12px no-repeat;}
+.btn_outWork:hover {background:#575757 url('/resource/images/button/btn_outWork.png') 20px 12px no-repeat;}
+

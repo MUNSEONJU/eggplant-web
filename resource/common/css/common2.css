@@ -1,0 +1,313 @@
+@charset "utf-8";
+
+html, body {
+  height:100%;
+  font-family:"맑은 고딕", "Malgun Gothic", AppleGothic, "돋움", Dotum, Sans-serif !important;
+  font-weight:normal; 
+  font-size:12px;
+  color:#333;
+  line-height: 1.5;
+  box-sizing:border-box;
+  -webkit-text-size-adjust:none;
+}
+iframe {
+  width:100%; 
+  height:100%;
+  display:block;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing:border-box;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+h1, h2, h3, h4, h5, h6,
+strong, dt {
+  font-weight: normal; 
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption {
+  display:none;
+}
+img,fieldset,button {
+  border:0 none;
+}
+em {
+  font-style:normal;
+}
+a,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+textarea {
+  border:1px solid #d9d9d9;
+  overflow:auto;
+  box-sizing:border-box;
+}
+input {
+  padding:0;
+  box-sizing:border-box;
+  background:none;
+  }
+label * {
+  vertical-align:middle;
+}
+select,
+input[type="radio"],
+input[type="checkbox"] {
+  -webkit-appearance:none; -moz-appearance:none; appearance:none;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  margin:0;
+  padding:0;
+  width:14px;
+  height:14px;
+}
+input[type=text]::-ms-clear {
+  display: none;
+}
+select{
+  border:1px solid #d9d9d9;
+  vertical-align:middle;
+}
+select::-ms-expand {
+  display:none; 
+}
+*:focus,
+*:active {
+  outline:none; 
+}
+*:-webkit-auto:fill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+
+/* 여백 */
+// margin
+.mt0{margin-top:0;}
+.mt5{margin-top:5px;}
+.mt10{margin-top:10px;}
+.mt15{margin-top:15px;}
+.mt20{margin-top:20px;}
+.mt25{margin-top:25px;}
+.mt30{margin-top:30px;}
+.mt35{margin-top:35px;}
+.mt40{margin-top:40px;}
+.mt45{margin-top:45px;}
+.mt50{margin-top:50px;}
+
+.ml0{margin-left:0;}
+.ml5{margin-left:5px;}
+.ml10{margin-left:10px;}
+.ml15{margin-left:15px;}
+.ml20{margin-left:20px;}
+.ml25{margin-left:25px;}
+.ml30{margin-left:30px;}
+.ml35{margin-left:35px;}
+.ml40{margin-left:40px;}
+.ml45{margin-left:45px;}
+.ml50{margin-left:50px;}
+
+.mr0{margin-right:0;}
+.mr5{margin-right:5px;}
+.mr10{margin-right:10px;}
+.mr15{margin-right:15px;}
+.mr20{margin-right:20px;}
+.mr25{margin-right:25px;}
+.mr30{margin-right:30px;}
+.mr35{margin-right:35px;}
+.mr40{margin-right:40px;}
+.mr45{margin-right:45px;}
+.mr50{margin-right:50px;}
+
+.mb0{margin-bottom:0;}
+.mb5{margin-bottom:5px;}
+.mb10{margin-bottom:10px;}
+.mb15{margin-bottom:15px;}
+.mb20{margin-bottom:20px;}
+.mb25{margin-bottom:25px;}
+.mb30{margin-bottom:30px;}
+.mb35{margin-bottom:35px;}
+.mb40{margin-bottom:40px;}
+.mb45{margin-bottom:45px;}
+.mb50{margin-bottom:50px;}
+
+.m0{margin:0;}
+.m5{margin:5px;}
+.m10{margin:10px;}
+.m15{margin:15px;}
+.m20{margin:20px;}
+.m25{margin:25px;}
+.m30{margin:30px;}
+.m35{margin:35px;}
+.m40{margin:40px;}
+.m45{margin:45px;}
+.m50{margin:50px;}
+
+// padding
+.pt0{padding-top:0;}
+.pt5{padding-top:5px;}
+.pt10{padding-top:10px;}
+.pt15{padding-top:15px;}
+.pt20{padding-top:20px;}
+.pt25{padding-top:25px;}
+.pt30{padding-top:30px;}
+.pt35{padding-top:35px;}
+.pt40{padding-top:40px;}
+.pt45{padding-top:45px;}
+.pt50{padding-top:50px;}
+
+.pl0{padding-left:0;}
+.pl5{padding-left:5px;}
+.pl10{padding-left:10px;}
+.pl15{padding-left:15px;}
+.pl20{padding-left:20px;}
+.pl25{padding-left:25px;}
+.pl30{padding-left:30px;}
+.pl35{padding-left:35px;}
+.pl40{padding-left:40px;}
+.pl45{padding-left:45px;}
+.pl50{padding-left:50px;}
+
+.pr0{padding-right:0;}
+.pr5{padding-right:5px;}
+.pr10{padding-right:10px;}
+.pr15{padding-right:15px;}
+.pr20{padding-right:20px;}
+.pr25{padding-right:25px;}
+.pr30{padding-right:30px;}
+.pr35{padding-right:35px;}
+.pr40{padding-right:40px;}
+.pr45{padding-right:45px;}
+.pr50{padding-right:50px;}
+
+.pb0{padding-bottom:0;}
+.pb5{padding-bottom:5px;}
+.pb10{padding-bottom:10px;}
+.pb15{padding-bottom:15px;}
+.pb20{padding-bottom:20px;}
+.pb25{padding-bottom:25px;}
+.pb30{padding-bottom:30px;}
+.pb35{padding-bottom:35px;}
+.pb40{padding-bottom:40px;}
+.pb45{padding-bottom:45px;}
+.pb50{padding-bottom:50px;}
+
+.p0{padding:0;}
+.p5{padding:5px;}
+.p10{padding:10px;}
+.p15{padding:15px;}
+.p20{padding:20px;}
+.p25{padding:25px;}
+.p30{padding:30px;}
+.p35{padding:35px;}
+.p40{padding:40px;}
+.p45{padding:45px;}
+.p50{padding:50px;}
+
+/* Calendar Tab키 */
+#ui-datepicker-div {z-index:5 !important;}
+/* #ui-datepicker-div a:focus{outline:1px dashed #ff8a00;}
+#ui-datepicker-div input[type=radio]:focus{ooutline:1px dashed #ff8a00;}
+#ui-datepicker-div input[type=checkbox]:focus{outline:1px dashed #ff8a00;}
+#ui-datepicker-div button:focus,input[type=button]:focus{outline:1px dashed #ff8a00;} */
+.ui-datepicker {width: 18em;} /* 달력 월,년 셀렉트 박스 크기 때문에 추가 */ 
+
+/* floating */
+.clearFix:after {content:""; display:block; height:0; clear:both; visibility:hidden;}
+.clearFix {zoom:1;}
+.floatL {float:left !important;}
+.floatR {float:right !important;}
+.clear  {clear:both !important;}
+
+/* 정렬 */
+.alignL {text-align:left !important;}
+.alignC {text-align:center !important;}
+.alignR {text-align:right !important;}
+.valignT {vertical-align:top !important;}
+.valignM {vertical-align:middle !important;}
+
+.noscroll {overflow:hidden;}
+
+// scroll
+.h-scroll-design{
+  overflow:auto;
+  &::-webkit-scrollbar { background-color:transparent;width:20px; height:20px;} 
+  &::-webkit-scrollbar-track {background-color:transparent;}
+  &::-webkit-scrollbar-thumb {background-color:transparent;border-right:3px solid #d3d5e0;}
+  &::-webkit-scrollbar-thumb:horizontal  {background-color:transparent;border-bottom:2px solid #d3d5e0;border-right:none;}
+  &::-webkit-scrollbar-button {display:none}
+     
+  & .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background-color:#d3d5e0;
+  }
+  & .mCSB_scrollTools .mCSB_draggerRail{
+    background:transparent;
+  }
+}
+.h-scroll-design2 {
+  overflow:auto;
+  &::-webkit-scrollbar { background-color:transparent;width:8px; height:8px;} 
+  &::-webkit-scrollbar-track {background-color:transparent;}
+  &::-webkit-scrollbar-thumb {background-color:#d3d5e0;border-radius:20px;}
+  &::-webkit-scrollbar-button {display:none}
+}
+
+
+.color-main01 {color: #4e5983; }
+.color-main02 {color: #47bdb3; }
+.color-sub01 {color: #868daa; }
+.color-sub02 {color: #fb9c80; }
+
+.font-13{font-size: 13px; }
+.font-17{font-size: 17px; }
+.font-22{font-size: 22px; }
+
+.font-bold {font-weight: bold; }
+.underline {position:relative; display:inline;}
+
+/*  full page  */
+.h-full-biz-frame {
+  position:fixed; top:0; left:0;
+  padding:0 !important;
+}
+
+.h-hidden-zone {
+  display:none !important;
+}
+
+.h-no-transition {
+  transition:none !important;
+}

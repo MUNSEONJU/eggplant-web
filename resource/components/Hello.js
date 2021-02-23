@@ -1,16 +1,13 @@
 
-export class Hello extends React.Component {
+export default class Hello extends React.Component {
   constructor(props){
     super(props);
-    this.state = { text: "헬로웅" , liked : false};
+    this.state = { text: "test text" , liked : false};
   }
 
   render(){
-    return React.createElement(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'aaaaaaa'
-      );
-    }
+    return (
+      <span>컴포넌트 데이터 : <input type="text" value="{this.state.text}"/> </span>
+    )
+  }
 }
-  // <span>{this.state.text}</span>

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/* 추가버튼 임시스타일 */
+/* .h-form-btn.h-add
+{
+  background-color:#9DBCD4; height:30px; color:#fff; text-align:center;font-size:1.5em;
+} */
+/* .h-form-btn.h-add:hover
+{
+  background-color:#ADDCD4;
+} */
+/* 추가모드 */
+.h-freeform-row.h-form-add .h-form-btns
+{
+  display:block;
+}
+.h-freeform-row.h-form-add .h-form-btn.h-edit, .h-freeform-row.h-form-add .h-form-btn.h-cancel
+{
+  display:none;
+}
+
+/* 읽기모드 */
+.h-freeform-row.h-form-read:hover 
+{
+  background-color:#ddffee;
+}
+.h-freeform-row.h-form-read .h-form-btns
+{
+  display:none;
+}
+.h-freeform-row.h-form-read:hover .h-form-btns
+{
+  display:block;
+}
+/* .h-freeform-row.h-form-read .h-form-btn.h-save, .h-freeform-row.h-form-read .h-form-btn.h-cancel */
+.h-freeform-row.h-form-read .h-form-btn.h-save
+{
+  display:none;
+}
+
+/* 편집모드 */
+.h-freeform-row.h-form-edit .h-form-btns
+{
+  display:block;
+}
+/* .h-freeform-row.h-form-edit .h-form-btn.h-delete, .h-freeform-row.h-form-edit .h-form-btn.h-edit */
+.h-freeform-row.h-form-edit .h-form-btn.h-delete
+{
+  display:none;
+}

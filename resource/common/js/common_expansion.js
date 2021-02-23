@@ -1,5 +1,7 @@
 $(document).ready(function () 
 {
+  console.log("ready");
+  return;
   //chkAuthMenu 권한체크를 위해 추가함
   if(window.Page != null)
   {
@@ -33,19 +35,19 @@ $(document).ready(function ()
     DevTool.init();
     if(typeof HcgMain != "undefined") HcgMain.layout.roundBody();
     
-    if(!!$("body").attr2("layoutAuto")) {} 
+    /* if(!!$("body").attr2("layoutAuto")) {} 
     else 
     { 
       if(typeof Layout != "undefined") Layout.init();
       LayoutFlex.init();
     } 
-    if(!!$("body").attr2("layoutAuto")) {} else { if(typeof Layout != "undefined") setTimeout(function(){Layout.resize();}, 500);}
+    if(!!$("body").attr2("layoutAuto")) {} else { if(typeof Layout != "undefined") setTimeout(function(){Layout.resize();}, 500);} */
     if(typeof(LoadPage) == "function")
     {
       var lp = LoadPage();
       //LoadPage가 끝난 후에 applyElementSessionCon()를 실행하기 위함.
       $(lp).promise().done(function()
-      {
+      {/* 
         // 사원찾기공통 after_func을 최초1회실행
         $(".h-component-sy181").each(function(i, e){
           var obj = $(e);
@@ -83,25 +85,25 @@ $(document).ready(function ()
         catch(e)
         {
           parentWindow = null;
-        }
+        } */
       });
     }
     else
     {
-      setTimeout(function(){HCG.captureBodyImage()},1000);
+      /* setTimeout(function(){HCG.captureBodyImage()},1000); */
     }
-    
+    /* 
     if($.browser.mozilla){
       $.each(["mousedown", "mouseover", "mouseout", "mousemove", "mousedrag", "click", "dblclick"], function(i, eventName){
         window.addEventListener(eventName, function(e){
           window.event = e;
         });
       });
-    }
+    } */
   }
   
   /*sub_menu*/
-  $('.h-sub-menu > .h-select-text').on('click',function(){
+  /* $('.h-sub-menu > .h-select-text').on('click',function(){
     if( HCG.isAni() )
     {
       $(this).siblings('ul').stop().slideDown();
@@ -123,7 +125,7 @@ $(document).ready(function ()
     {
       $(this).parent('ul').hide();
     }
-  });
+  }); */
   
 });
 
@@ -2887,7 +2889,7 @@ var HCG =
     
     if(info.AutoFitColWidth == 1 || info.AutoFitColWidth == undefined)
     {
-      HCG.sheetAutoReSize(sheet, info.AutoFitColWidth);
+      //HCG.sheetAutoReSize(sheet, info.AutoFitColWidth);
     }
   }
   /**
@@ -3385,7 +3387,7 @@ var HCG =
           }
           HCG.SearchItems.init(_id, null, true);
         });
-        LayoutFlex.init();
+        //LayoutFlex.init();
         
         HCG.applyElementSearchEmp(this);
         HCG.applyElementSearchOrg(this);

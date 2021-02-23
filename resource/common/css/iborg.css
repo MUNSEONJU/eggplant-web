@@ -1,0 +1,278 @@
+@charset "utf-8";
+/*┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓*/
+/*┃ IBLEADERS IBORG COMPONENT CSS FILE                                                               ┃*/
+/*┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫*/
+/*┃                                                                                                  ┃*/
+/*┃ 제 품 명 : IBORG 1.2.0.0                                                                         ┃*/
+/*┃                                                                                                  ┃*/
+/*┃ 설 계 자 : (주)아이비리더스                                                                      ┃*/
+/*┃                                                                                                  ┃*/
+/*┃ 모 듈 명 : iborg.css                                                                             ┃*/
+/*┃                                                                                                  ┃*/
+/*┃ 기능설명 : starturl.html 에서 사용되는 스타일시트 정의                                           ┃*/
+/*┃                                                                                                  ┃*/
+/*┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫*/
+/*┃                                                                            ⓘ아이비리더스 2006   ┃*/
+/*┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛*/
+
+
+/*┌─────────────────────────────────────────────────┐*/
+/*│ 시스템 정의 스타일                                                                               │*/
+/*├─────────────────────────────────────────────────┤*/
+/*│                                                                                                  │*/
+/*│ ♣ 시스템 내부적으로 사용되는 스타일 (수정불가)                                                  │*/
+/*│                                                                                                  │*/
+/*└─────────────────────────────────────────────────┘*/
+
+/* 노드의 기본 스타일 - 개체의 크기값(width, height)은 스타일 보다는 각각의 자료에 넣는 것을 권장함 */
+.iborg_basic
+{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+	border:1px solid #666;
+	color:#030;
+	background-color:#f8fff8;
+	font-size:10pt;
+}
+
+/* 노드의 마우스 오버 스타일 */
+.iborg_moveover
+{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+
+	border:1px dotted red;
+	color:#030;
+	background-color:#f8fff8;
+	font-size:10pt;
+}
+
+/* 노드의 마우스 아웃 스타일 */
+.iborg_moveout
+{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+
+	border:1px solid black ;
+}
+
+/* 노드의 조직 이동 스타일 */
+.iborg_change
+{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+	border:1px solid red;
+	color:#030;
+	background-color:#f8fff8;
+	font-size:10pt;
+}
+
+/* 테이블 트리 table */
+.iborg_tabletree_table
+{
+	width:100%;
+	height:100%;
+	border:1px solid silver;
+	border-width:0 0 0 0;
+	padding:100;
+}
+
+/* 테이블 트리 td */
+.iborg_tabletree_td
+{
+	padding:2;
+	border:1px solid silver;
+	border-width:0 0 1 0;
+	text-valign:top;
+}
+
+
+
+/* 테이블 트리 td */
+.iborg_tabletree_item
+{
+	color:#030;
+	font-size:10pt;
+	border:1px solid #eef;
+}
+
+/* 테이블 트리 table */
+.iborg_vtabletree_table
+{
+	width:100%;
+	height:100%;
+	border:1px solid silver;
+	border-width:0 0 0 0;
+	padding:100;
+}
+
+/* 테이블 트리 td */
+.iborg_vtabletree_td
+{
+	width:16;
+	padding:2;
+	border:1px solid silver;
+	border-width:0 1 0 0;
+	text-align:center;
+	text-valign:top;
+}
+
+/* 팝업메뉴 */
+.iborg_popupmenu
+{
+	color:black;
+	background-color:white;
+}
+
+/* 팝업메뉴 포커스 */
+.iborg_popupmenu_focus
+{
+	color:white;
+	background-color:#36f;
+}
+
+/* 모든 이미지는 테두리가 없음 */
+img{border:0;}
+
+
+/*┌─────────────────────────────────────────────────┐*/
+/*│ 사용자 정의 스타일                                                                               │*/
+/*├─────────────────────────────────────────────────┤*/
+/*│                                                                                                  │*/
+/*│ ♣ 사용자가 자료와 관련하여 응용 가능한 사용자 정의 스타일 (편집 가능)                           │*/
+/*│                                                                                                  │*/
+/*└─────────────────────────────────────────────────┘*/
+
+/* 노드의 기본 스타일 - 개체의 크기값(width, height)은 스타일 보다는 각각의 자료에 넣는 것을 권장함 */
+.iborg_basic2
+{
+	background-color:#f8fff8;
+	font-size:10pt;
+}
+
+.iborg_basic2_one
+{
+
+	background-color:yellow;
+	font-size:10pt;
+}
+
+
+.iborg_basic2_close
+{
+
+	background-color:#999999;
+	font-size:10pt;
+}
+
+.iborg_basic2_new
+{
+
+	background-color:#D4D1FF;
+	font-size:10pt;
+}
+
+
+
+
+
+.iborg_basic2_td
+{
+	BORDER-RIGHT: gray 1px solid;
+	BORDER-TOP: gray 1px solid;
+	BORDER-LEFT: gray 1px solid;
+	BORDER-BOTTOM: gray 1px solid;
+	font-size:10pt;
+	color:#030;
+}
+
+.iborg_basic2_tdline
+{
+	BORDER-BOTTOM: gray 1px solid;
+	font-size:10pt;
+	color:#030;
+	vertical-align:middle;
+	/*
+	width:150;*/
+	height:30;
+
+	text-align:center;
+	vertical-align:middle;
+
+}
+
+.iborg_basic2_tdnline
+{
+	font-size:10pt;
+	color:#030;
+	/*
+	width:150;*/
+	height:20;
+
+	text-align:center;
+	vertical-align:middle;
+
+}
+
+
+
+.iborg_basic2_tdlinev
+{
+	BORDER-BOTTOM: gray 1px solid;
+	font-size:10pt;
+	color:#030;
+	/*
+	width:20;
+	height:200;
+	*/
+	writing-mode :tb-rl;
+	text-align:left;
+	vertical-align:center;
+
+}
+
+.iborg_basic2_tdnlinev
+{
+	font-size:10pt;
+	color:#030;
+	/*
+	width:20;
+	height:70;
+*/
+	writing-mode :tb-rl;
+	text-align:left;
+	vertical-align:center;
+}
+
+
+.iborg_basic2_nodata
+{
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: red 0px solid; BORDER-LEFT: red 0px solid; WIDTH: 50%; BORDER-BOTTOM: red 0px solid;
+
+}
+
+
+
+
+/* 노드의 마우스 오버 스타일 */
+.iborg_moveover2
+{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+
+	border:1px dotted red;
+	color:#030;
+	background-color:#f8fff8;
+	font-size:10pt;
+}
+
+/* 노드의 조직 이동 스타일 */
+.iborg_change2
+{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+	border:1px solid red;
+	color:#030;
+	background-color:#f8fff8;
+	font-size:10pt;
+}
+
+.righttext
+{
+	color:#030;
+	font-size:8pt;
+}

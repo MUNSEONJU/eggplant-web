@@ -1,0 +1,61 @@
+/*
+Error: Undefined mixin 'mediaQuery'.
+        on line 3 of C:/EHR_PROJECT/HUNEL_EHRS_WEB_STAND/sass/layout/main.scss, in `mediaQuery'
+        from line 3 of C:/EHR_PROJECT/HUNEL_EHRS_WEB_STAND/sass/layout/main.scss
+
+1: /*메인 페이지*\/
+2: 	/*스크롤 디자인*\/
+3: 	@include mediaQuery('769px','null'){
+4: 		div::-webkit-scrollbar { background-color:transparent;width:10px} 
+5: 		div::-webkit-scrollbar-track {background-color:transparent;}
+6: 		div::-webkit-scrollbar-thumb {background-color:#babac0;border-radius:16px;border:1px solid #fff;}
+7: 		div::-webkit-scrollbar-button {display:none}
+8: 	};
+
+Backtrace:
+C:/EHR_PROJECT/HUNEL_EHRS_WEB_STAND/sass/layout/main.scss:3:in `mediaQuery'
+C:/EHR_PROJECT/HUNEL_EHRS_WEB_STAND/sass/layout/main.scss:3
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/stack.rb:98:in `with_mixin'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+C:/Ruby26-x64/bin/compass:23:in `load'
+C:/Ruby26-x64/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'mediaQuery'.\A         on line 3 of C:/EHR_PROJECT/HUNEL_EHRS_WEB_STAND/sass/layout/main.scss, in `mediaQuery'\A         from line 3 of C:/EHR_PROJECT/HUNEL_EHRS_WEB_STAND/sass/layout/main.scss\A \A 1: /*메인 페이지*/\A 2: 	/*스크롤 디자인*/\A 3: 	@include mediaQuery('769px','null'){\A 4: 		div::-webkit-scrollbar { background-color:transparent;width:10px} \A 5: 		div::-webkit-scrollbar-track {background-color:transparent;}\A 6: 		div::-webkit-scrollbar-thumb {background-color:#babac0;border-radius:16px;border:1px solid #fff;}\A 7: 		div::-webkit-scrollbar-button {display:none}\A 8: 	};"; }

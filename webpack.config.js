@@ -18,6 +18,7 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'resource/components/dist'),
     // library: "bundle", // 이름을 지정 할 경우 bundle.es6Code() 형태로 호출
+    library: "MyHello",
     libraryExport:'default',
     libraryTarget: "umd", // output.libraryTarget을 umd로 설정하면 모듈은 <script src=""> 로드 뿐만 아니라 모든 방식의 로더에서 사용할 수 있음
   },

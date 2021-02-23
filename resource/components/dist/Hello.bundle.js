@@ -3,10 +3,10 @@
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
-	else {
-		var a = factory();
-		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
-	}
+	else if(typeof exports === 'object')
+		exports["MyHello"] = factory();
+	else
+		root["MyHello"] = factory();
 })(self, function() {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
@@ -15,7 +15,9 @@ return /******/ (() => { // webpackBootstrap
 /***/ 936:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* unused harmony export Hello */
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Hello)
+/* harmony export */ });
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -50,7 +52,7 @@ var Hello = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      text: "헬로웅",
+      text: "test text",
       liked: false
     };
     return _this;
@@ -59,20 +61,17 @@ var Hello = /*#__PURE__*/function (_React$Component) {
   _createClass(Hello, [{
     key: "render",
     value: function render() {
-      var _this2 = this;
-
-      return React.createElement('button', {
-        onClick: function onClick() {
-          return _this2.setState({
-            liked: true
-          });
-        }
-      }, 'aaaaaaa');
+      return /*#__PURE__*/React.createElement("span", null, "\uCEF4\uD3EC\uB10C\uD2B8 \uB370\uC774\uD130 : ", /*#__PURE__*/React.createElement("input", {
+        type: "text",
+        value: "{this.state.text}"
+      }), " ");
     }
   }]);
 
   return Hello;
-}(React.Component); // <span>{this.state.text}</span>
+}(React.Component);
+
+
 
 /***/ })
 

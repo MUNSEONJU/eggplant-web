@@ -1,0 +1,314 @@
+@charset "UTF-8";
+/**
+조회조건관련 임시 css
+*/
+.temp-dash-border
+{
+  /* border : 1px dashed #ccc; */
+}
+
+.h-button-calendar
+ {
+  display: inline-block;
+  width: 13px;
+  height: 11px;
+  background: url("/resource/images/icon/icon_calender.png") no-repeat;
+  margin: 3px;
+}
+.h-button-search
+ {
+  display: inline-block;
+  width: 13px;
+  height: 11px;
+  background: url("/resource/images/icon/icon_calender.png") no-repeat;
+  margin: 3px;
+}
+
+.h-seeker
+{
+  padding-top:3px;
+}
+.h-seeker input
+{
+  height:25px;
+  font-size:1.2em;
+  border:0;
+  border-bottom:1px solid #ccc;
+  padding:0 10px;
+  width:100%;
+}
+.h-search-area-wrap {
+	flex:1; overflow:auto;
+}
+.h-search-area
+{
+  display:none; /* 스크립트 초기화할 때 block처리 */
+  /* padding : 0 10px 0 0; */
+}
+.h-search-items{
+  margin-bottom:5px;
+}
+.h-search-area.container-fluid{
+  padding-left:0px; padding-right:0px;
+}
+
+.h-search-area.container-fluid .row{
+  margin-left:-3px;margin-right:-3px;
+}
+
+.h-search-area .h-item
+{
+  padding:0 3px 7px 3px;
+  opacity:1;
+  overflow:hidden;
+}
+
+.h-search-area .h-item-fade-out
+{
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity:0 !important;
+}
+
+.h-search-area .h-item-fade-in
+{
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity:1 !important;
+}
+
+/* 특정 아이템 hover: border */
+.h-search-area .h-item:hover .h-item-border{border:1px solid #00c3af;}
+.h-search-area .h-item.h-focus .h-item-border{border:1px solid #00c3af;}
+
+.h-search-area .h-item .h-item-border
+{
+  padding: 0 5px 0 10px;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #4e5983;
+  height: 30px;
+  align-items : center;
+}
+/* 조회조건버튼 테스트용 */
+.h-search-area .h-item .h-action
+{
+  text-align:center;
+  color:#fff;
+  width:20px;
+  height:20px;
+  border:1px solid #ccc;
+  border-radius:3px;
+  background-color:#ccc;
+}
+
+.h-search-area .h-item .h-label
+{ 
+  background: url(/resource/images/icon/s_dot.gif) left 6px no-repeat;
+  padding:0 7px 0 10px;
+  border-right:1px solid #ccc;
+}
+.h-search-area .h-item.h-req .h-label
+{ 
+  background: url(/resource/images/bul/bul_star01.png) left 6px no-repeat;
+}
+.h-search-area .h-item .h-check-label
+{ 
+  line-height:20px;
+  padding:0 10px 0 7px;
+}
+
+/* item input */
+/* .h-search-area .h-item .h-input-area
+{
+  padding-left: 10px;
+}
+.h-search-area .h-item .h-input-area input, select
+{
+  border:0 !important;
+  width:98%;
+}
+.h-search-area .h-item .h-input-area input[type=radio]
+{
+  border:0 !important;
+  width:15px;
+} */
+
+
+/* 조회조건 조회버튼 */
+.h-search-area .h-search-button > div
+{
+  padding-right:12px;
+  text-align: left;
+}
+.h-search-area .h-search-button .h-btn > input
+{
+	display:inline-block;
+	padding: 0 10px 0 26px;
+	height:30px;
+  line-height:100%;
+  border:1px solid #47bdb3;
+	border-radius: 4px;
+	font-size: 12px;
+	color: #fff;
+	background: url(/resource/images/icon/icon_search01.png) no-repeat 10px center #47bdb3;
+	width:auto;
+	
+	
+}
+.h-search-area .h-search-btn input.h-btn:hover
+{
+  background:none;
+  color:#00c3af;
+}
+
+.h-search-area .h-search-btn input.h-btn>input:disabled{
+    background: url(/resource/images/icon/icon_search02.png) no-repeat 10px center #e3e6ea;
+    background-size:12px;
+}
+
+.h-search-area .h-search-button .h-btn > input:hover{
+	background-color: #36a39a;
+}
+
+.h-search-area .h-period-separator
+{
+  padding:0 4px;
+}
+
+/** buttons **/
+/* 버튼 wrapper */
+.h-btns
+{
+  display:inline-block;
+}
+.h-btn-area.float-right .h-btns{
+  text-align:right;
+}
+/* 버튼 */
+.h-btn
+{
+  display:inline-block;
+}
+.h-btn > input
+{
+  padding: 5px 15px 5px 32px;
+  border:1px solid #c2c6d4;
+  color:#7d84a0;
+  border-radius:30px;
+  background:none;
+  font-size:12px;
+  font-weight:bold;
+}
+.h-btn > input:hover {
+	border-color:#47bdb3;
+	color:#48bdb3;
+}
+
+/* 버튼 앞 인풋 */
+.h-btns .h-input-list{
+	display:inline-block;
+	vertical-align:top;
+}
+.h-btns .h-input-list + .h-input-list{
+  margin-left:10px;
+}
+.h-btns .h-input-list.lineR + .h-input-list{
+  margin-left:0;
+}
+
+/* 모바일용 버튼 펼치기버튼  */
+.h-btn-toggler
+{
+  display:none;
+}
+.h-btn-dialog
+{
+  position:fixed;
+  width:200px;
+  border:1px solid #00c3af;
+  border-radius:15px;
+  background-color:#fff;
+  padding:10px;
+  
+  z-index : 999999;
+}
+.h-btn-dialog div.h-btn > input
+{
+  width:180px;
+  border:none;
+  text-align:left;
+}
+
+/* buttons (모바일) */
+@media ( max-width:768px )
+{
+  .h-btn-area
+  {
+    position:relative
+  }
+  .h-btns
+  {
+    position:absolute;
+    top:28px;
+    right:0;
+    display:none;
+    /* min-width:200px; */
+    border:1px solid #00c3af;
+    border-radius:15px;
+    background-color:#fff;
+    padding:10px;
+    z-index:100;
+  }
+   /* 펼친상태 */
+  .h-btns.h-unfold
+  {
+    display:inline-block;
+  }
+  .h-btns span.h-btn
+  {
+    display:block;
+  }
+  .h-btns .h-btn > input
+  {
+    width:180px;
+    border:none;
+    text-align:left;
+  }
+  .h-btns .h-btn > input:hover{background-color:#00c3af;color:#fff;}
+  .h-btns .h-btn > input:disabled:hover{background-color:#e3e6ea;border:1px solid #e3e6ea; color:#fff;}
+  
+  .h-btn-toggler
+  {
+    display:inline-block;
+    border:1px solid #00c3af;
+    border-radius:100%;
+    width:25px;
+    height:25px;
+    padding:3px 0 0 6px;
+    color:#00c3af;
+    font-weight:bold;
+  }
+  .h-btns.h-unfold .h-btn > input:hover{color:#47bdb3;}
+}
+  .h-search-subtit {display:flex; flex-direction:row; flex-wrap:wrap;}
+  .h-search-subtit > .container-fluid{}
+  .h-search-subtit .container-fluid .h-head-title{padding-left:0; padding-right:0;}
+  .h-search-subtit .h-head-title{margin-bottom:5px;}
+  .h-search-subtit .h-search-area{}  
+  
+  @media screen and (max-width:992px){
+    .h-search-subtit  {display:block;}
+    .h-search-subtit > .container-fluid{}
+    /* 
+    .h-search-subtit .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+      padding-left:0;padding-right:0;
+     */
+    }
+  }
