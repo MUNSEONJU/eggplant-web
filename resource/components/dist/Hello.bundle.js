@@ -52,19 +52,49 @@ var Hello = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      text: "test text",
-      liked: false
+      text: "",
+      num: 0
     };
+    console.log("construct. props is ", props);
+    _this.changeText = _this.changeText.bind(_assertThisInitialized(_this));
+    _this.changeNum = _this.changeNum.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Hello, [{
+    key: "changeText",
+    value: function changeText(e) {
+      this.setState({
+        text: e.target.value
+      });
+
+      if (typeof this.props.funcText != "undefined") {
+        this.props.funcText(this.state.text);
+      }
+    }
+  }, {
+    key: "changeNum",
+    value: function changeNum(e) {
+      this.setState({
+        num: e.target.value
+      });
+
+      if (typeof this.props.funcNum != "undefined") {
+        this.props.funcNum(this.state.num);
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React.createElement("span", null, "\uCEF4\uD3EC\uB10C\uD2B8 \uB370\uC774\uD130 : ", /*#__PURE__*/React.createElement("input", {
+      return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", null, "hello component!"), /*#__PURE__*/React.createElement("div", null, "\uC601\uD654\uBA85 : ", /*#__PURE__*/React.createElement("input", {
         type: "text",
-        value: "{this.state.text}"
-      }), " ");
+        value: this.state.text,
+        onChange: this.changeText
+      })), /*#__PURE__*/React.createElement("div", null, "\uC0C1\uC601\uD69F\uC218 : ", /*#__PURE__*/React.createElement("input", {
+        type: "text",
+        value: this.state.num,
+        onChange: this.changeNum
+      })));
     }
   }]);
 
