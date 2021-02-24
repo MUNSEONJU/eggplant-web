@@ -11,6 +11,7 @@
 <meta http-equiv="Pragma" content="No-Cache" />
 <meta name="robots" content="noindex,nofollow" />
 
+<script type='text/javascript' src="/const.js"></script>
 
 <!-- react redux library -->
 <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
@@ -38,9 +39,8 @@
 <script type='text/javascript' src="/def_ibsheet7.js"></script>
 <script>
 
+window.name = "ehrTopFrame";
 var cMyHello; // 컴포넌트 object
-const CHANGE_TEXT = 'CHANGE_TEXT';
-const CHANGE_NUM = 'CHANGE_NUM';
 
 // 액션생산자
 function changeText(text)
@@ -57,17 +57,26 @@ function changeNum(num)
     num
   }
 }
+function changeTarget(target)
+{
+  return {
+    type: CHANGE_TARGET,
+    target
+  }
+}
 
 // store의 값을 갱신하고
 // 값을 참조하는 컴포넌트나 시트에 바인딩해준다.
 function eggReducer(state, action)
 {
-  // initialize
+  // store initialize
   if( state === undefined )
   {
     return {
-      text:'입력해주세요',
-      num : 0
+      target:'',
+      text:'',
+      popText : '',
+      num : 0,
     }
   }
 
@@ -90,17 +99,29 @@ function eggReducer(state, action)
         $("#storeText").val(state.text);
       }
       
-      // 2. ibsheet
-      let selRow = mySheet.GetSelectRow();
-      if( state.text != mySheet.GetCellValue(selRow, "sTitle") )
-      {
-        mySheet.SetCellValue(selRow, "sTitle", state.text, 0);
-      }
-      
-      // 3. react 컴포넌트
+      // 2. react 컴포넌트
       if( state.text != cMyHello.state.text )
       {
         cMyHello.setState({text : state.text})
+      }
+      
+      // 3. ibsheet
+      if( state.target == TARGET_TOP )
+      {
+        let selRow = mySheet.GetSelectRow();
+        if( state.text != mySheet.GetCellValue(selRow, "sTitle") )
+        {
+          mySheet.SetCellValue(selRow, "sTitle", state.text, 0);
+        }
+      }
+      else if(state.target == TARGET_IFRAME)
+      {
+        let sheet = window.frames["frame01"].contentWindow.popSheet;
+        let selRow = sheet.getFocusedRow();
+        if( state.text != sheet.getValue(selRow, "TextData"))
+        {
+          sheet.setValue(selRow, "TextData", state.text);
+        }
       }
       
     }
@@ -135,12 +156,24 @@ function eggReducer(state, action)
       }
     }
     break;
+    case CHANGE_TARGET:
+    {
+      state.target = action.target;
+      console.log("> chagne target", state);
+      if( state.target == TARGET_TOP  && !$("#radioTop").is(":checked") ){
+        $("#radioTop").prop("checked", true);
+      }
+      else if( state.target == TARGET_IFRAME && !$("#radioIframe").is(":checked") ){
+        $("#radioIframe").prop("checked", true);
+      }
+    }
+    break;
   }
   return state;
 }
 
 // 저장소 생성
-const store = Redux.createStore(eggReducer);
+var store = Redux.createStore(eggReducer);
 var sheet1;
 $(document).ready(function( ){
 
@@ -158,13 +191,15 @@ $(document).ready(function( ){
     funcText : changeHelloText,
     funcNum : changeHelloNum
   }
-  cMyHello = ReactDOM.render(React.createElement(MyHello, propMyHello), domContainer2); 
 
+  cMyHello = ReactDOM.render(React.createElement(MyHello, propMyHello), domContainer2); 
 
   // redux store 초기값 dispatch
   //store.dispatch(changeText("onload success"));
   //store.dispatch(changeNum(9999));
   showState();
+
+  store.dispatch(changeTarget(TARGET_TOP));
 });
 
 function insert01()
@@ -199,8 +234,11 @@ function mySheet_OnChange(Row, Col, Value)
   switch(svnm)
   {
     case "sTitle":
-    { 
-      store.dispatch(changeText(Value));
+    {
+      if( store.getState().target == TARGET_TOP )
+      {
+        store.dispatch(changeText(Value));
+      }
     }
     break;
     case "sCount":
@@ -220,31 +258,50 @@ function mySheet_OnClick(Row, Col)
   store.dispatch(changeText(sTitle));
   store.dispatch(changeNum(sCount));
 }
+
+function clickRadio01(val)
+{
+  // 라디오 선택할때마다 타겟 변경
+  store.dispatch(changeTarget(val));
+}
+
 </script>
 </head>
 
 <body>
-  <div style="background-color:#eee;">
-    <h1 style="font-size:3rm;"> redux storage </h1>
-    <div>redux store (text) : <input type="text" id="storeText" disabled/></div>
-    <div>redux store (num) : <input type="text" id="storeNum" disabled/></div>
-  </div>
+  <div style="display:inline-block; width:49%;">
 
-  <div style="background-color:#1a1; padding-bottom:30px;">
-    <h1 style="font-size:3rm;"> ibsheet </h1>
-    <div>
-      <span>buttons</span>
-      <input type="button" value="추가" onclick="insert01();"/>
-      <input type="button" value="복사" onclick="copy01();"/>
+    <div style="background-color:#eee;">
+      <h1 style="font-size:3rm;"> redux storage </h1>
+      <div>
+        <input type="radio" id="radioTop" value="TARGET_TOP" name="radio01" onchange="clickRadio01(this.value);" /><label for="radioTop">Top</label>
+        <input type="radio" id="radioIframe" value="TARGET_IFRAME" name="radio01" onchange="clickRadio01(this.value);" /><label for="radioIframe">Iframe</label>
+      </div>
+      <div>redux store (text) : <input type="text" id="storeText" disabled/></div>
+      <div>redux store (num) : <input type="text" id="storeNum" disabled/></div>
     </div>
-    <div id='ib-container'></div>
-    <div id='pagination' style='text-align:center;width:100%'></div>
+  
+    <div style="background-color:#1a1; padding-bottom:30px;">
+      <h1 style="font-size:3rm;"> ibsheet </h1>
+      <div>
+        <span>buttons</span>
+        <input type="button" value="추가" onclick="insert01();"/>
+        <input type="button" value="복사" onclick="copy01();"/>
+      </div>
+      <div id='ib-container'></div>
+      <div id='pagination' style='text-align:center;width:100%'></div>
+    </div>
+  
+    <div style="background-color:#a22;">
+      <h1 style="font-size:3rm;"> React Components </h1>
+      <div id="hello" aaa="aaa" ></div>
+      <div id="like_button_container"></div>
+    </div>
+
   </div>
 
-  <div style="background-color:#a22;">
-    <h1 style="font-size:3rm;"> React Components </h1>
-    <div id="hello" aaa="aaa" ></div>
-    <div id="like_button_container"></div>
+  <div style="display:inline-block; width:49%;vertical-align:top;">
+    <iframe id="frame01" src="/popup.html" style="width:100%; height:500px;"></iframe>
   </div>
  
 
