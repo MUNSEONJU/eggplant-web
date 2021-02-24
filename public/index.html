@@ -83,7 +83,8 @@ function eggReducer(state, action)
     }
   }
 
-  console.log("run reducer", [state, action]);
+  console.log("run reducer", state);
+  console.log("action : ", action);
 
   let type = action.type;
   switch(type)
@@ -109,7 +110,6 @@ function eggReducer(state, action)
       }
       
       // 3. react 컴포넌트
-      console.log("cmyhello text? ", cMyHello.state.text);
       if( state.text != cMyHello.state.text )
       {
         cMyHello.setState({text : state.text})
@@ -162,7 +162,6 @@ $(document).ready(function( ){
   // react 컴포넌트 그리기
   // ReactDom.render(<component></component>, 타겟 엘리먼트)
   // React.createElement (컴포넌트, props, ...);
-  console.log ("e", e);
   const domContainer1 = document.querySelector('#like_button_container');
   ReactDOM.render(React.createElement(LikeButton), domContainer1); 
 
@@ -175,14 +174,9 @@ $(document).ready(function( ){
 
 
   // redux store 초기값 dispatch
-  console.log(">dispatch");
   store.dispatch(changeText("onload success"));
   store.dispatch(changeNum(9999));
   showState();
-
-  console.log("헬로컴포넌트 스테이트", cMyHello.state);
-  console.log("헬로컴포넌", cMyHello);
-  
 });
 
 function insert01()
@@ -203,20 +197,17 @@ function showState()
 // 컴포넌트가 갱신되면 redux store에 dispatch해주는 함수
 function changeHelloText()
 {
-  console.log("call changeHelloText", arguments[0]);
   store.dispatch(changeText(arguments[0]));
 }
 // 컴포넌트가 갱신되면 redux store에 dispatch해주는 함수
 function changeHelloNum()
 {
-  console.log("call changeHelloNum", arguments[0]);
   store.dispatch(changeNum(arguments[0]));
 }
 
 function mySheet_OnChange(Row, Col, Value)
 {
   var svnm = mySheet.ColSaveName(Col);
-  console.log("onchange " + svnm, Value);
   switch(svnm)
   {
     case "sTitle":

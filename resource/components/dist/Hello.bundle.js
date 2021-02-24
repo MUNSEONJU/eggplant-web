@@ -69,7 +69,7 @@ var Hello = /*#__PURE__*/function (_React$Component) {
       });
 
       if (typeof this.props.funcText != "undefined") {
-        this.props.funcText(this.state.text);
+        this.props.funcText(e.target.value);
       }
     }
   }, {
@@ -80,7 +80,7 @@ var Hello = /*#__PURE__*/function (_React$Component) {
       });
 
       if (typeof this.props.funcNum != "undefined") {
-        this.props.funcNum(this.state.num);
+        this.props.funcNum(e.target.value);
       }
     }
   }, {
