@@ -20,20 +20,8 @@
 <!-- jquery -->
 <script type='text/javascript' src="/common/js/jquery-3.4.1.min.js"></script>
 
-<!-- 다국어 -->
-<!-- <script type="text/javascript" src="/common/js/MultiLabel_ko.js"></script> -->
-<!-- <script type="text/javascript" src="/common/js/MultiMessage_ko.js"></script> -->
-
-<!-- <script type='text/javascript' src='/common/js/layout-2.js'></script> -->
-<!-- <script type='text/javascript' src="/common/js/layout3.js"></script> -->
-
-<!-- <script type='text/javascript' src="/common/js/jquery.ui.classy.protify.json2.js"></script>
-<script type='text/javascript' src="/common/js/commonResource.js"></script>
-<script type='text/javascript' src="/common/js/common_expansion.js"></script>
-<script type='text/javascript' src="/common/js/common_base.js"></script> -->
 
 <!-- ibsheet -->
-
 <script type='text/javascript' src="/common/Sheet/ibleaders.js"></script>
 <script type='text/javascript' src="/common/Sheet/ibsheet.js"></script>
 <script type='text/javascript' src="/common/Sheet/ibsheetinfo.js"></script>
@@ -174,8 +162,8 @@ $(document).ready(function( ){
 
 
   // redux store 초기값 dispatch
-  store.dispatch(changeText("onload success"));
-  store.dispatch(changeNum(9999));
+  //store.dispatch(changeText("onload success"));
+  //store.dispatch(changeNum(9999));
   showState();
 });
 
@@ -221,6 +209,16 @@ function mySheet_OnChange(Row, Col, Value)
     }
     break;
   }
+}
+
+function mySheet_OnClick(Row, Col)
+{
+  let sTitle = mySheet.GetCellValue(Row, "sTitle");
+  let sCount = mySheet.GetCellValue(Row, "sCount");
+
+  // 시트 선택할때마다 해당 Row값으로 dispatch
+  store.dispatch(changeText(sTitle));
+  store.dispatch(changeNum(sCount));
 }
 </script>
 </head>
