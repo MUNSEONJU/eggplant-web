@@ -1,7 +1,7 @@
 <!doctype html>
 
 <html lang="en">
-<head>
+<head> 
 <meta charset="utf-8">
 <title>EGGPLANT</title>
 <meta charset="utf-8" />
@@ -26,7 +26,6 @@
 <script type='text/javascript' src="/common/Sheet/ibleaders.js"></script>
 <script type='text/javascript' src="/common/Sheet/ibsheet.js"></script>
 <script type='text/javascript' src="/common/Sheet/ibsheetinfo.js"></script>
-
 <!-- <script src='https://www.ibsheet.com/ibleaders.js'></script> -->
 <!-- <script src='https://www.ibsheet.com/demo/js/lib/sheet/ibsheet.js'></script> -->
 <!-- <script src='https://www.ibsheet.com/demo/js/lib/sheet/ibsheetinfo.js'></script> -->
@@ -89,7 +88,6 @@ function eggReducer(state, action)
     case CHANGE_TEXT:
     {
       // 값갱신
-      console.log(" > change text.. ");
       state.text = action.text;
 
       // 참조하는 컴포넌트에 바인드
@@ -128,7 +126,6 @@ function eggReducer(state, action)
     break;
     case CHANGE_NUM:
     {
-      console.log(" > change num.. ", [typeof action.num, action.num]);
       if( isNaN(action.num) )
       {
         alert("isnan");
@@ -144,22 +141,33 @@ function eggReducer(state, action)
         $("#storeNum").val(state.num);
       }
 
-      let selRow = mySheet.GetSelectRow();
-      if( state.num != mySheet.GetCellValue(selRow, "sCount") )
-      {
-        mySheet.SetCellValue(selRow, "sCount", state.num, 0);
-      }
-
       if( state.num != cMyHello.state.num )
       {
         cMyHello.setState({num : state.num})
+      }
+
+      if( state.target == TARGET_TOP )
+      {
+        let selRow = mySheet.GetSelectRow();
+        if( state.num != Number(mySheet.GetCellValue(selRow, "sCount")) )
+        {
+          mySheet.SetCellValue(selRow, "sCount", state.num, 0);
+        }
+      }
+      else if(state.target == TARGET_IFRAME)
+      {
+        let sheet = window.frames["frame01"].contentWindow.popSheet;
+        let selRow = sheet.getFocusedRow();
+        if( state.num != Number(sheet.getValue(selRow, "IntData")) )
+        {
+          sheet.setValue(selRow, "IntData", state.num);
+        }
       }
     }
     break;
     case CHANGE_TARGET:
     {
       state.target = action.target;
-      console.log("> chagne target", state);
       if( state.target == TARGET_TOP  && !$("#radioTop").is(":checked") ){
         $("#radioTop").prop("checked", true);
       }
@@ -172,7 +180,7 @@ function eggReducer(state, action)
   return state;
 }
 
-// 저장소 생성
+// 저장소 생성. 다른 window에서 참조하도록 window에 할당
 var store = Redux.createStore(eggReducer);
 var sheet1;
 $(document).ready(function( ){
@@ -282,7 +290,7 @@ function clickRadio01(val)
     </div>
   
     <div style="background-color:#1a1; padding-bottom:30px;">
-      <h1 style="font-size:3rm;"> ibsheet </h1>
+      <h1 style="font-size:3rm;"> ibsheet7 </h1>
       <div>
         <span>buttons</span>
         <input type="button" value="추가" onclick="insert01();"/>

@@ -78,29 +78,42 @@ ib = {
 //시트 이벤트
 'event':{
     onBeforeChange:function (args){
-        if( args.col == "TextData" && args.row.Kind != 'Header' && args.row.Kind != 'Foot')
+        if( args.row.Kind != 'Header' && args.row.Kind != 'Foot')
         {
-            if( args.oldval != args.val)
+          let store = parent.store;
+          if( store.getState().target == TARGET_IFRAME )
+          {
+            if( args.col == "TextData" )
             {
-                // 부모 Redux store dispatch
-                let store = parent.store;
-                if( store.getState().target == TARGET_IFRAME )
-                {
-                    store.dispatch(parent.changeText(args.val));
-                }
-            }   
+              if( args.oldval != args.val)
+              {
+                  // 부모 Redux store dispatch
+                  store.dispatch(parent.changeText(args.val));
+              }
+            }
+            else if( args.col == "IntData" )
+            {
+              if( args.oldval != args.val)
+              {
+                  // 부모 Redux store dispatch
+                  store.dispatch(parent.changeNum(args.val));
+              }
+            }
+          }
         }
     },
-    onClick:function (args) {
-        if( args.col == "TextData" && args.row.Kind != 'Header' && args.row.Kind != 'Foot')
+    //onclick :function(args){
+    onAfterClick:function (args) {
+        if( args.row.Kind != 'Header' && args.row.Kind != 'Foot')
         {
-            let val = popSheet.getValue(popSheet.getFocusedRow(), "TextData");
-            console.log(">> click   ", val);
+            let text = popSheet.getValue(popSheet.getFocusedRow(), "TextData");
+            let num = popSheet.getValue(popSheet.getFocusedRow(), "IntData");
             // 부모 Redux store dispatch
             let store = parent.store;
             if( store.getState().target == TARGET_IFRAME )
             {
-                store.dispatch(parent.changeText(val));
+                store.dispatch(parent.changeText(text));
+                store.dispatch(parent.changeNum(num));
             }
             return;
         }
@@ -131,6 +144,7 @@ ib = {
 
 <body>
 <h1 style="font-size:3rm;"> Popup Frame</h1>
+<h2 > ibsheet 8</h2>
 <div style='height:400px;'>
     <div id='sheetDiv' style='width:100%;height:100%'></div>
 </div>
