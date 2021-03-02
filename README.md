@@ -1,7 +1,5 @@
 # eggplant-web
 
 ## 구동법
-* 서버 설치
-  - npm install nodemon
-* 서버실행
-  - nodemon app.js
+* 서버기동 : nodemon app.js 
+* http://localhost:3000
